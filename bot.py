@@ -19,7 +19,7 @@ geminiApi=os.getenv("geminiApi")
 genai.configure(api_key=geminiApi)
 
 #PASO 4. CREAR EL MODELO
-modelo=genai.GenerativeModel("gemini-2.0-flash-001")
+modelo=genai.GenerativeModel("gemini-1.5-pro-002")
 
 #PASO 5. CARGADO DEL MODELO
 logging.basicConfig(level=logging.INFO)
