@@ -1,0 +1,13 @@
+Nombre de la empresa: UCATEC
+Diplomados:
+    -Diseño y Desarrollo de aplicaciones moviles
+    -Marketing Digital
+    -Inteligencia Artificial
+    -Educacion Superior basada en Competencias
+    -Diseño y Desarrollo web
+
+Diplomados Destacados:
+    -Redes Neuroaneles de Cero a Experto
+    -Angular 19
+    -React Native
+

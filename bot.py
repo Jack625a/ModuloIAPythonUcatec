@@ -13,6 +13,11 @@ load_dotenv()
 telegramToken=os.getenv("telegramToken")
 geminiApi=os.getenv("geminiApi")
 
+
+#PROCESAR EL CONOCIMIENTO BASE DE LA EMPRESA
+with open("entrenamiento.txt","r",encoding="utf-8")as file:
+    entrenamiento=file.read()
+
 #PASO 3. COMUNICARNOS CON GEMINI Y CONFIGURARLO
 genai.configure(api_key=geminiApi)
 
@@ -25,9 +30,18 @@ logging.basicConfig(level=logging.INFO)
 #PASO 6. CREAR UNA FUNCION PARA EL MANEJO DE LOS MENSAJES
 async def obtenerMensajes(update:Update, context:ContextTypes.DEFAULT_TYPE):
     mensajeUsuario=update.message.text
-    respuesta=modelo.generate_content(mensajeUsuario)
-    await update.message.reply_text(respuesta.text)
+    prompt=f"""Tomaras el rol de agente de ventas virtual de la empresa UCATEC solo usaras la siguiente informacion para responder:
+    {entrenamiento} pregunta al usuario: {mensajeUsuario} 
+    Responde de forma breve, clara y profesional.
+"""
+    try:
 
+        respuesta=modelo.generate_content(prompt)
+        await update.message.reply_text(respuesta.text)
+    except Exception as e:
+        await update.message.reply_text("Ocurrio un error al procesar...")
+
+        
 #PASO 7. FUNCION PARA INICIAR EL MODELO
 async def inicar(update:Update, context:ContextTypes.DEFAULT_TYPE):
     await update.message.reply_text("Hola bienvenido al modulo iaPython en Ucatec. Cual es tu consulta?")
