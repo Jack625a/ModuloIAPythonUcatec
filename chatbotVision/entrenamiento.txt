@@ -1,0 +1,18 @@
+Nombre de la empresa: UCATEC
+Diplomados:
+    -Diseño y Desarrollo de aplicaciones moviles - 3000bs
+    -Marketing Digital- 3000bs
+    -Inteligencia Artificial- 3000bs
+    -Educacion Superior basada en Competencias- 3000bs
+    -Diseño y Desarrollo web- 3000bs
+
+Diplomados Destacados:
+    -Redes Neuroaneles de Cero a Experto - 1000bs
+    -Angular 19 - 25bs
+    -React Native - 3bs
+
+METODOS DE PAGO 
+    - Pago QR: https://upload.wikimedia.org/wikipedia/commons/d/d7/Commons_QR_code.png
+
+
+
